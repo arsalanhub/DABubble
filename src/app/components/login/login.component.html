@@ -2,15 +2,15 @@
   <div class="login-header">
     <img src="./assets/img/logo.png" alt="logo" />
     <div class="register-wrapper">
-      <span>Neu bei DABubble?</span>
-      <a class="link" [routerLink]="'/sign-up'">Konto erstellen</a>
+      <span>New to DABubble?</span>
+      <a class="link" [routerLink]="'/sign-up'">Signup</a>
     </div>
   </div>
   <form [formGroup]="loginForm" (ngSubmit)="submitFomrEmailAndPassword()">
-    <h2>Anmeldung</h2>
+    <h2>Announcement</h2>
     <p>
-      Wir empfehlen dir, die E-Mail-Adresse zu nutzen, die du bei der Arbeit
-      verwendest.
+      We recommend that you use the email address you use at work
+      use.
     </p>
     <div class="input-with-error-wrapper">
       <div class="input-wrapper">
@@ -26,7 +26,7 @@
           email.touched &&
           (email.hasError('required') || email.hasError('email'))
         "
-        >Diese E-Mail-Adresse ist leider ungültig.</span
+        >Unfortunately, this email address is invalid.</span
       >
     </div>
     <div class="input-with-error-wrapper">
@@ -43,27 +43,27 @@
           password.touched &&
           (password.hasError('required') || password.hasError('password'))
         "
-        >Bitte geben Sie ein Passwort ein.</span
+        >Please enter a password.</span
       >
     </div>
-    <a [routerLink]="'/forgot-password'">Passwort vergessen?</a>
+    <a [routerLink]="'/forgot-password'">Forgot Password?</a>
     <div class="seperator-wrapper">
       <div></div>
-      <span class="seperator">Oder</span>
+      <span class="seperator">Or</span>
       <div></div>
     </div>
     <button type="button" (click)="loginWithGoogle()" class="button-with-icon">
-      <img src="./assets/img/google.svg" alt="google-logo" />Anmelden mit Google
+      <img src="./assets/img/google.svg" alt="google-logo" />Sign in with Google
     </button>
     <div class="login-button-wrapper">
-      <button type="submit" class="login-button">Anmelden</button>
+      <button type="submit" class="login-button">Register</button>
       <button type="button" (click)="guestLogin()" class="guest-login-button">
-        Gäste-Login
+        Guest login
       </button>
     </div>
   </form>
-  <div class="legal-wrapper">
+  <!-- <div class="legal-wrapper">
     <a class="link">Impressum</a>
     <a class="link">Datenschutz</a>
-  </div>
+  </div> -->
 </section>
