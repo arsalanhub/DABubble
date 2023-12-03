@@ -12,7 +12,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 25px 45px;
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -20,7 +19,6 @@ section {
 
     > div {
       display: flex;
-      // flex-direction: column;
       align-items: baseline;
       gap: 8px;
       font-size: 18px;
@@ -73,10 +71,14 @@ section {
 
     .input-with-error-wrapper {
       width: 100%;
+      
+      .visible {
+        min-height: 1.25rem;
 
-      span {
-        color: rgb(237, 29, 119);
-        font-size: 14px;
+        span {
+          color: rgb(237, 29, 119);
+          font-size: 14px;
+        }
       }
     }
 

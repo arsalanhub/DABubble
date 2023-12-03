@@ -21,13 +21,15 @@
           formControlName="email"
         />
       </div>
-      <span
+      <div class="visible">
+        <span
         *ngIf="
           email.touched &&
           (email.hasError('required') || email.hasError('email'))
         "
-        >Unfortunately, this email address is invalid.</span
-      >
+        >Unfortunately, this email address is invalid.
+        </span>
+      </div>
     </div>
     <div class="input-with-error-wrapper">
       <div class="input-wrapper">
@@ -38,14 +40,16 @@
           formControlName="password"
         />
       </div>
-      <span
+      <div class="visible">
+        <span
         *ngIf="
           password.touched &&
           (password.hasError('required') || password.hasError('password'))
         "
         >Please enter a password.
-      </span>
-      <span *ngIf="password.hasError('minlength')">Minimum 5 characters required</span>
+        </span>
+        <span *ngIf="password.hasError('minlength')">Minimum 5 characters required</span>
+      </div>
     </div>
     <a [routerLink]="'/forgot-password'">Forgot Password?</a>
     <div class="seperator-wrapper">
