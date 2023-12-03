@@ -34,7 +34,7 @@
         <img src="./assets/img/lock.svg" alt="lock-icon" />
         <input
           type="password"
-          placeholder="Passwort"
+          placeholder="Password"
           formControlName="password"
         />
       </div>
@@ -43,8 +43,9 @@
           password.touched &&
           (password.hasError('required') || password.hasError('password'))
         "
-        >Please enter a password.</span
-      >
+        >Please enter a password.
+      </span>
+      <span *ngIf="password.hasError('minlength')">Minimum 5 characters required</span>
     </div>
     <a [routerLink]="'/forgot-password'">Forgot Password?</a>
     <div class="seperator-wrapper">
@@ -56,7 +57,7 @@
       <img src="./assets/img/google.svg" alt="google-logo" />Sign in with Google
     </button>
     <div class="login-button-wrapper">
-      <button type="submit" class="login-button">Register</button>
+      <button type="submit" class="login-button">Login</button>
       <button type="button" (click)="guestLogin()" class="guest-login-button">
         Guest login
       </button>

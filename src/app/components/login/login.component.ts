@@ -21,7 +21,7 @@ export class LoginComponent {
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 
@@ -35,7 +35,6 @@ export class LoginComponent {
   async submitFomrEmailAndPassword() {
     const email = this.email.value;
     const password = this.password.value;
-    /*     console.log(this.loginForm); */
 
     if (this.loginForm.valid) {
       try {
